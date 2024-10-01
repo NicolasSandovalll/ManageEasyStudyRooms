@@ -10,7 +10,7 @@ public class Avance01Test {
     @BeforeEach
     public void setUp() {
         avance01 = new Avance01();
-        // Puedes inicializar cualquier otro estado que necesites
+        
     }
 
     @Test
