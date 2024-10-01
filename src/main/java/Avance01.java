@@ -3,8 +3,6 @@ import java.util.*;
 public class Avance01 {
 
     private static final Scanner scanner = new Scanner(System.in);
-    static final List<String> usuarios = new ArrayList<>();
-    static String matriculaActual = null;
 
     public static void main(String[] args) {
         EjecutarSistema();
@@ -30,14 +28,6 @@ public class Avance01 {
         usuarios.add("21212121214");
         usuarios.add("21212121215");
         usuarios.add("21212121217");
-        // Agrega más usuarios si es necesario...
-    }
-
-    public static void mostrarMenuInicial() {
-        System.out.println("\nMenú Inicial\n");
-        System.out.println("1.- Iniciar Sesión");
-        System.out.println("2.- Registrarse");
-        System.out.println("3.- Salir");
     }
 
     public static boolean iniciarSesion() {
@@ -91,7 +81,6 @@ public class Avance01 {
         switch (opcion) {
             case 1:
                 if (iniciarSesion()) {
-                    System.out.println("Aquí se llama al menú principal");
                 }
                 break;
             case 2:
@@ -133,7 +122,6 @@ public class Avance01 {
         return matricula.matches("\\d{8}[\\dk]\\d{2}");
     }
 
-    private static void mostrarMensajeOpcionInvalida() {
         System.out.println("Opción inválida. Por favor, inténtelo de nuevo.");
     }
 }
