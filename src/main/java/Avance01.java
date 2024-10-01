@@ -3,8 +3,8 @@ import java.util.*;
 public class Avance01 {
 
     private static final Scanner scanner = new Scanner(System.in);
-    private static final List<String> usuarios = new ArrayList<>();
-    private static String matriculaActual = null;
+    static final List<String> usuarios = new ArrayList<>();
+    static String matriculaActual = null;
 
     public static void main(String[] args) {
         EjecutarSistema();
