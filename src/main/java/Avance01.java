@@ -3,12 +3,12 @@ import java.util.*;
 public class Avance01 {
 
     private static final Scanner scanner = new Scanner(System.in);
-    private static final List<Integer> logias7Personas = new ArrayList<>();
-    private static final List<Integer> logias5Personas = new ArrayList<>();
-    private static final List<Integer> logias3Personas = new ArrayList<>();
-    private static final List<String> usuarios = new ArrayList<>();
-    private static final Map<String, String> reservas = new HashMap<>();  // Almacena "numeroLogia:capacidad"
-    private static String matriculaActual = null;
+    public static final List<Integer> logias7Personas = new ArrayList<>();
+    public static final List<Integer> logias5Personas = new ArrayList<>();
+    public static final List<Integer> logias3Personas = new ArrayList<>();
+    public static final List<String> usuarios = new ArrayList<>();
+    public static final Map<String, String> reservas = new HashMap<>();  // Almacena "numeroLogia:capacidad"
+    public static String matriculaActual = null;
 
     public static void main(String[] args) {
         EjecutarSistema();
