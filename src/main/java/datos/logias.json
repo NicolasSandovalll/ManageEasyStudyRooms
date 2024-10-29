@@ -1,0 +1,14 @@
+[
+  {
+    "idLogia": 1,
+    "capacidad": 5,
+    "ubicacion": "Segundo Piso",
+    "estado": "disponible"
+  },
+  {
+    "idLogia": 2,
+    "capacidad": 7,
+    "ubicacion": "Tercer Piso",
+    "estado": "disponible"
+  }
+]
