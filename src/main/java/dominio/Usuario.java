@@ -1,16 +1,14 @@
+
+
 package dominio;
 
 public class Usuario {
-    private String matricula;
-    private String contrasena;
+    protected String matricula;
+    protected String contrasena;
 
     public Usuario(String matricula, String contrasena) {
         this.matricula = matricula;
         this.contrasena = contrasena;
-    }
-
-    public boolean iniciarSesion(String matriculaIngresada, String contrasenaIngresada) {
-        return this.matricula.equals(matriculaIngresada) && this.contrasena.equals(contrasenaIngresada);
     }
 
     public String getMatricula() {
@@ -19,6 +17,10 @@ public class Usuario {
 
     public String getContrasena() {
         return contrasena;
+    }
+
+    public boolean iniciarSesion(String matriculaIngresada, String contrasenaIngresada) {
+        return this.matricula.equals(matriculaIngresada) && this.contrasena.equals(contrasenaIngresada);
     }
 
     @Override

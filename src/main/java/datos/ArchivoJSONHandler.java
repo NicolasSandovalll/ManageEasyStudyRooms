@@ -1,4 +1,3 @@
-// Archivo: datos/ArchivoJSONHandler.java
 package datos;
 
 import org.json.JSONArray;
@@ -29,21 +28,21 @@ public class ArchivoJSONHandler {
         }
     }
 
-    public JSONArray leerUsuariosDelArchivo(String rutaArchivo) {
+    public JSONArray leerJSONArrayDelArchivo(String rutaArchivo, String nombreArray) {
         try {
             String contenido = new String(Files.readAllBytes(Paths.get(rutaArchivo)));
             JSONObject jsonRoot = new JSONObject(contenido);
-            return jsonRoot.getJSONArray("usuarios");
+            return jsonRoot.getJSONArray(nombreArray);
         } catch (IOException e) {
             System.out.println("Error al leer el archivo JSON: " + e.getMessage());
             return new JSONArray();
         }
     }
 
-    public boolean escribirEnArchivo(String rutaArchivo, JSONArray usuariosArray) {
+    public boolean escribirEnArchivo(String rutaArchivo, String nombreArray, JSONArray jsonArray) {
         try (FileWriter fileWriter = new FileWriter(rutaArchivo)) {
             JSONObject jsonRoot = new JSONObject();
-            jsonRoot.put("usuarios", usuariosArray);
+            jsonRoot.put(nombreArray, jsonArray);
             fileWriter.write(jsonRoot.toString(4));
             return true;
         } catch (IOException e) {

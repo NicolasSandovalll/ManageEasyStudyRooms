@@ -1,4 +1,3 @@
-// Archivo: dominio/UsuarioHandler.java
 package dominio;
 
 import datos.ArchivoJSONHandler;
@@ -8,41 +7,30 @@ import org.json.JSONObject;
 public class UsuarioHandler {
     private final ArchivoJSONHandler archivoJSONHandler;
     private final String rutaArchivo;
+    private final LogiaHandler logiaHandler;
 
-    public UsuarioHandler(String rutaArchivo) {
+    public UsuarioHandler(String rutaArchivo, String rutaArchivoLogias) {
         this.archivoJSONHandler = new ArchivoJSONHandler();
         this.rutaArchivo = rutaArchivo;
-        if (archivoJSONHandler.verificarOCrearArchivo(rutaArchivo)) {
-            System.out.println("Archivo JSON verificado o creado exitosamente.");
-        }
+        this.logiaHandler = new LogiaHandler(rutaArchivoLogias);
     }
 
-    public boolean registrarEstudiante(String matricula, String contrasena) {
-        JSONArray usuariosArray = archivoJSONHandler.leerUsuariosDelArchivo(rutaArchivo);
-
-        if (matriculaYaRegistrada(usuariosArray, matricula)) {
-            System.out.println("La matrícula ya está registrada.");
-            return false;
-        }
-
-        agregarUsuario(usuariosArray, matricula, contrasena);
-        return archivoJSONHandler.escribirEnArchivo(rutaArchivo, usuariosArray);
-    }
-
-    private boolean matriculaYaRegistrada(JSONArray usuariosArray, String matricula) {
+    public Usuario iniciarSesion(String matricula, String contrasena) {
+        JSONArray usuariosArray = archivoJSONHandler.leerJSONArrayDelArchivo(rutaArchivo, "usuarios");
         for (int i = 0; i < usuariosArray.length(); i++) {
-            JSONObject usuario = usuariosArray.getJSONObject(i);
-            if (usuario.getString("matricula").equals(matricula)) {
-                return true;
+            JSONObject usuarioJSON = usuariosArray.getJSONObject(i);
+            if (usuarioJSON.getString("matricula").equals(matricula) &&
+                    usuarioJSON.getString("contrasena").equals(contrasena)) {
+
+                String tipo = usuarioJSON.optString("tipo", "estudiante");
+                if (tipo.equals("administrador")) {
+                    return new Administrador(matricula, contrasena, logiaHandler);
+                } else {
+                    return new Estudiante(matricula, contrasena, logiaHandler);
+                }
             }
         }
-        return false;
-    }
-
-    private void agregarUsuario(JSONArray usuariosArray, String matricula, String contrasena) {
-        JSONObject nuevoUsuario = new JSONObject();
-        nuevoUsuario.put("matricula", matricula);
-        nuevoUsuario.put("contrasena", contrasena);
-        usuariosArray.put(nuevoUsuario);
+        System.out.println("Credenciales incorrectas.");
+        return null;
     }
 }
