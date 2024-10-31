@@ -1,0 +1,124 @@
+{
+  "logias": [
+    {
+      "idLogia": 1,
+      "capacidad": 3,
+      "ubicacion": "Piso 2",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 2,
+      "capacidad": 3,
+      "ubicacion": "Piso 2",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 3,
+      "capacidad": 3,
+      "ubicacion": "Piso 2",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 4,
+      "capacidad": 3,
+      "ubicacion": "Piso 2",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 5,
+      "capacidad": 5,
+      "ubicacion": "Piso 2",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 6,
+      "capacidad": 5,
+      "ubicacion": "Piso 2",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 7,
+      "capacidad": 5,
+      "ubicacion": "Piso 2",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 8,
+      "capacidad": 5,
+      "ubicacion": "Piso 2",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 9,
+      "capacidad": 7,
+      "ubicacion": "Piso 2",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 10,
+      "capacidad": 7,
+      "ubicacion": "Piso 2",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 1,
+      "capacidad": 3,
+      "ubicacion": "Piso 3",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 2,
+      "capacidad": 3,
+      "ubicacion": "Piso 3",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 3,
+      "capacidad": 3,
+      "ubicacion": "Piso 3",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 4,
+      "capacidad": 3,
+      "ubicacion": "Piso 3",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 5,
+      "capacidad": 5,
+      "ubicacion": "Piso 3",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 6,
+      "capacidad": 5,
+      "ubicacion": "Piso 3",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 7,
+      "capacidad": 5,
+      "ubicacion": "Piso 3",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 8,
+      "capacidad": 5,
+      "ubicacion": "Piso 3",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 9,
+      "capacidad": 7,
+      "ubicacion": "Piso 3",
+      "estado": "disponible"
+    },
+    {
+      "idLogia": 10,
+      "capacidad": 7,
+      "ubicacion": "Piso 3",
+      "estado": "disponible"
+    }
+  ]
+}

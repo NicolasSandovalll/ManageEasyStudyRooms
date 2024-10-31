@@ -1,0 +1,22 @@
+{"usuarios": [
+    {
+        "tipo": "estudiante",
+        "matricula": "21212121k21",
+        "contrasena": "1234"
+    },
+    {
+        "tipo": "administrador",
+        "matricula": "21212121211",
+        "contrasena": "adminpass"
+    },
+    {
+        "tipo": "estudiante",
+        "matricula": "21212121212",
+        "contrasena": "1234567"
+    },
+    {
+        "tipo": "estudiante",
+        "matricula": "21212121213",
+        "contrasena": "2121"
+    }
+]}
