@@ -3,10 +3,10 @@ package dominio;
 import org.json.JSONObject;
 
 public class Logia {
-    private String idLogia;
-    private int capacidad;
-    private String ubicacion;
-    private JSONObject disponibilidad;
+    private String idLogia;               // Correspondiente a "idLogia" en el JSON
+    private int capacidad;                // Correspondiente a "capacidad" en el JSON
+    private String ubicacion;             // Correspondiente a "ubicacion" en el JSON
+    private JSONObject disponibilidad;    // Correspondiente a "disponibilidad" en el JSON
 
     // Constructor
     public Logia(String idLogia, int capacidad, String ubicacion, JSONObject disponibilidad) {
@@ -32,6 +32,7 @@ public class Logia {
     public JSONObject getDisponibilidad() {
         return disponibilidad;
     }
+
 
     public void setIdLogia(String idLogia) {
         this.idLogia = idLogia;
